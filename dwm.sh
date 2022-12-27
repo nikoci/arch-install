@@ -12,6 +12,8 @@ sudo firewall-cmd --reload
 
 programs=(
     xorg
+    xorg-xinit
+    xorg-apps
     firefox
     arc-gtk-theme
     arc-icon-theme
@@ -55,8 +57,8 @@ programs=(
 sudo pacman -S "${programs[@]}"
 
 ## Choose one
-# sudo cp ./xorg.conf.d/xorg.conf /etc/X11/xorg.conf.d/xorg.conf
-# sudo cp ./xorg.conf.d/10-nvidia-drm-outputclass.conf /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
+# sudo mkdir -p /etc/X11/xorg.conf.d/ && sudo cp ./xorg.conf.d/xorg.conf /etc/X11/xorg.conf.d/xorg.conf
+# sudo mkdir -p /etc/X11/xorg.conf.d/ && sudo cp ./xorg.conf.d/10-nvidia-drm-outputclass.conf /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
 
 mkdir ~/.sources
 
