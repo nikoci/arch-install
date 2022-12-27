@@ -12,6 +12,7 @@ echo "::1           localhost" >> /etc/hosts
 echo "127.0.1.1     archbtw.local archbtw" >> /etc/hosts
 
 programs=(
+    sudo
     efibootmgr
     networkmanager
     network-manager-applet
@@ -64,11 +65,9 @@ programs=(
 
 pacman -S "${programs[@]}"
 
+## Choose one
 # pacman -S --noconfirm xf86-video-vmware
-# cp ./xorg.conf.d/xorg.conf /etc/X11/xorg.conf.d/xorg.conf
-
 # pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
-# cp ./xorg.conf.d/10-nvidia-drm-outputclass.conf /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
 
 bootctl install
 bootctl update
