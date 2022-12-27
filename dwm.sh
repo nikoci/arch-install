@@ -11,9 +11,13 @@ sudo firewall-cmd --add-port=1025-65535/udp --permanent
 sudo firewall-cmd --reload
 
 programs=(
-    xorg
+    xorg-xserver
     xorg-xinit
-    xorg-apps
+    xorg-xrandr
+    xorg-xauth
+    xorg-xkbutils
+    xorg-xsetroot
+    xorg-xset
     firefox
     arc-gtk-theme
     arc-icon-theme
