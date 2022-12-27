@@ -90,7 +90,7 @@ systemctl enable firewalld
 systemctl enable acpid
 
 useradd -m nikoci
-usermod -aG wheel libvirtd nikoci
+usermod -aG wheel nikoci
 
 sed -i '85s/.//' /etc/sudoers
 
