@@ -64,6 +64,8 @@ sudo pacman -S "${programs[@]}"
 # sudo mkdir -p /etc/X11/xorg.conf.d/ && sudo cp ./xorg/xorg.conf.d/xorg.conf /etc/X11/xorg.conf.d/xorg.conf
 # sudo mkdir -p /etc/X11/xorg.conf.d/ && sudo cp ./xorg/xorg.conf.d/10-nvidia-drm-outputclass.conf /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
 
+cp ./xorg/.xprofile ~/.xprofile
+
 mkdir ~/.sources
 
 git clone https://git.suckless.org/dwm ~/.sources/dwm
@@ -82,7 +84,5 @@ git clone https://aur.archlinux.org/ly ~/.sources/ly
 cd ~/.sources/ly && makepkg -si
 
 sudo systemctl enable ly
-
-cp ./xorg/.xprofile ~/.xprofile
 
 printf "\e[1;34mDone! Please reboot.\n\e[0m"
