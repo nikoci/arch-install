@@ -53,6 +53,9 @@ programs=(
     noto-fonts-cjk
     noto-fonts-emoji
     polkit-gnome
+    nitrogen
+    lxappearance
+    thunar
 )
 
 sudo pacman -S "${programs[@]}"
@@ -71,5 +74,15 @@ cd ~/.sources/st && sudo make clean install
 
 git clone https://git.suckless.org/dmenu ~/.sources/dmenu
 cd ~/.sources/dmenu && sudo make clean install
+
+sudo mkdir -p /usr/share/xsessions
+sudo cp ./xorg/xsessions/dwm.desktop /usr/share/xsessions/dwm.desktop
+
+git clone https://aur.archlinux.org/ly ~/.sources/ly
+cd ~/.sources/ly && makepkg -si
+
+sudo systemctl enable ly
+
+cp ./xorg/.xprofile ~/.xprofile
 
 printf "\e[1;34mDone! Please reboot.\n\e[0m"
