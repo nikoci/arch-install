@@ -55,8 +55,8 @@ programs=(
 sudo pacman -S "${programs[@]}"
 
 ## Choose one
-# cp ./xorg.conf.d/xorg.conf /etc/X11/xorg.conf.d/xorg.conf
-# cp ./xorg.conf.d/10-nvidia-drm-outputclass.conf /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
+# sudo cp ./xorg.conf.d/xorg.conf /etc/X11/xorg.conf.d/xorg.conf
+# sudo cp ./xorg.conf.d/10-nvidia-drm-outputclass.conf /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
 
 mkdir ~/.sources
 
