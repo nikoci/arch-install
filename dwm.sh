@@ -52,7 +52,7 @@ programs=(
     noto-fonts-emoji
 )
 
-pacman -S "${programs[@]}"
+sudo pacman -S "${programs[@]}"
 
 ## Choose one
 # cp ./xorg.conf.d/xorg.conf /etc/X11/xorg.conf.d/xorg.conf
