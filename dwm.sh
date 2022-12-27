@@ -64,6 +64,8 @@ sudo pacman -S "${programs[@]}"
 # sudo mkdir -p /etc/X11/xorg.conf.d/ && sudo cp ./xorg/xorg.conf.d/xorg.conf /etc/X11/xorg.conf.d/xorg.conf
 # sudo mkdir -p /etc/X11/xorg.conf.d/ && sudo cp ./xorg/xorg.conf.d/10-nvidia-drm-outputclass.conf /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
 
+sudo mkdir -p /usr/share/xsessions
+sudo cp ./xorg/xsessions/dwm.desktop /usr/share/xsessions/dwm.desktop
 cp ./xorg/.xprofile ~/.xprofile
 
 mkdir ~/.sources
@@ -76,9 +78,6 @@ cd ~/.sources/st && sudo make clean install
 
 git clone https://git.suckless.org/dmenu ~/.sources/dmenu
 cd ~/.sources/dmenu && sudo make clean install
-
-sudo mkdir -p /usr/share/xsessions
-sudo cp ./xorg/xsessions/dwm.desktop /usr/share/xsessions/dwm.desktop
 
 git clone https://aur.archlinux.org/ly ~/.sources/ly
 cd ~/.sources/ly && makepkg -si
