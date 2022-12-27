@@ -51,7 +51,6 @@ programs=(
     dnsmasq
     vde2
     openbsd-netcat
-    iptables-nft
     ipset
     firewalld
     flatpak
@@ -71,7 +70,7 @@ pacman -S "${programs[@]}"
 # pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
 # cp ./xorg.conf.d/10-nvidia-drm-outputclass.conf /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
 
-systemctl enable networkmanager
+systemctl enable Networkmanager
 systemctl enable bluetooth
 systemctl enable cups.service
 systemctl enable sshd
