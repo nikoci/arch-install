@@ -77,7 +77,7 @@ cp -f ./systemd-boot/entries/arch.conf /boot/loader/entries/arch.conf
 
 pacman -S --noconfirm intel-ucode
 
-systemctl enable Networkmanager
+systemctl enable NetworkManager
 systemctl enable bluetooth
 systemctl enable cups.service
 systemctl enable sshd
