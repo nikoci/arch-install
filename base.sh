@@ -70,6 +70,14 @@ pacman -S "${programs[@]}"
 # pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
 # cp ./xorg.conf.d/10-nvidia-drm-outputclass.conf /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
 
+bootctl install
+bootctl update
+
+cp -f ./systemd-boot/loader.conf /boot/loader/loader.conf
+cp -f ./systemd-boot/entries/arch.conf /boot/loader/entries/arch.conf
+
+pacman -S --noconfirm intel-ucode
+
 systemctl enable Networkmanager
 systemctl enable bluetooth
 systemctl enable cups.service
@@ -87,4 +95,4 @@ usermod -aG wheel libvirtd
 
 sed -i '85s/.//' /etc/sudoers
 
-printf "\e[1;34mDone! Set passwords for root and users. Type exit, umount -R /mnt and reboot.\e[0m"
+printf "\e[1;34mDone! Set passwords for root and users. Type exit, umount -R /mnt and reboot.\n\e[0m"
