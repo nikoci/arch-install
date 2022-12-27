@@ -2,7 +2,7 @@
 
 ln -sf /usr/share/zoneinfo/Europe/Stockholm /etc/localtime
 hwclock --systohc
-sed -i '171s/.//' /etc/locale.conf
+sed -i '171s/.//' /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 echo "KEYMAP=sv-latin1" >> /etc/vconsole.conf
