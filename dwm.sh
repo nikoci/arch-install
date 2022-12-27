@@ -58,4 +58,15 @@ pacman -S "${programs[@]}"
 # cp ./xorg.conf.d/xorg.conf /etc/X11/xorg.conf.d/xorg.conf
 # cp ./xorg.conf.d/10-nvidia-drm-outputclass.conf /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
 
+mkdir ~/.sources
+
+git clone https://git.suckless.org/dwm ~/.sources/dwm
+cd ~/.sources/dwm && sudo make clean install
+
+git clone https://git.suckless.org/st ~/.sources/st
+cd ~/.sources/st && sudo make clean install
+
+git clone https://git.suckless.org/dmenu ~/.sources/dmenu
+cd ~/.sources/dmenu && sudo make clean install
+
 printf "\e[1;34mDone! Please reboot.\n\e[0m"
