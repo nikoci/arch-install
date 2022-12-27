@@ -52,6 +52,7 @@ programs=(
     adobe-source-han-serif-otc-fonts
     noto-fonts-cjk
     noto-fonts-emoji
+    polkit-gnome
 )
 
 sudo pacman -S "${programs[@]}"
