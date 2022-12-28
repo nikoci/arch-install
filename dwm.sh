@@ -71,6 +71,8 @@ sudo pacman -S "${programs[@]}"
 # sudo mkdir -p /etc/X11/xorg.conf.d/ && sudo cp ./xorg/xorg.conf.d/xorg.conf /etc/X11/xorg.conf.d/xorg.conf
 # sudo mkdir -p /etc/X11/xorg.conf.d/ && sudo cp ./xorg/xorg.conf.d/10-nvidia-drm-outputclass.conf /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
 
+mkinitcpio -P
+
 sudo mkdir -p /usr/share/xsessions
 sudo cp ./xorg/xsessions/dwm.desktop /usr/share/xsessions/dwm.desktop
 cp ./xorg/.xprofile ~/.xprofile
