@@ -24,7 +24,6 @@ programs=(
     vlc
     dina-font
     tamsyn-font
-    bdf-unifont
     ttf-bitstream-vera
     ttf-croscore
     ttf-dejavu
