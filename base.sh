@@ -65,10 +65,6 @@ programs=(
 
 pacman -S "${programs[@]}"
 
-## Choose one
-# pacman -S --noconfirm xf86-video-vmware
-# pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
-
 bootctl install
 bootctl update
 
