@@ -64,6 +64,10 @@ programs=(
 sudo pacman -S "${programs[@]}"
 
 ## Choose one
+# pacman -S --noconfirm xf86-video-vmware
+# pacman -S --noconfirm nvidia nvidia-utils nvidia-settings xorg-server-devel opencl-nvidia
+
+## Choose one
 # sudo mkdir -p /etc/X11/xorg.conf.d/ && sudo cp ./xorg/xorg.conf.d/xorg.conf /etc/X11/xorg.conf.d/xorg.conf
 # sudo mkdir -p /etc/X11/xorg.conf.d/ && sudo cp ./xorg/xorg.conf.d/10-nvidia-drm-outputclass.conf /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
 
